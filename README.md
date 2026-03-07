@@ -42,14 +42,8 @@
 | 1 | [java-student-management](./java-student-management/) | Student management system with Java Swing + AWT + MySQL database. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
 | 2 | [java-inventory-app](./java-inventory-app/) | Inventory management desktop app using JavaFX + JDBC + PostgreSQL. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
 | 3 | [java-bank-simulation](./java-bank-simulation/) | Bank account simulation with OOP, multithreading and JDBC. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| 4 | [java-chat-app](./java-chat-app/) | Real-time chat application using Java Sockets + multithreading (client-server). | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| 5 | [java-file-server](./java-file-server/) | File transfer server/client built with Java TCP sockets. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| 6 | [c-data-structures](./c-data-structures/) | Implementation of linked lists, stacks, queues, trees in C with pointers. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| 7 | [c-file-management](./c-file-management/) | File reading/writing system in C with binary and text file handling. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| 8 | [c-memory-manager](./c-memory-manager/) | Custom memory allocator in C demonstrating malloc/free/pointers. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| 9 | [c-socket-server](./c-socket-server/) | TCP/IP socket server built in C with client handling. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| 10 | [c-student-records](./c-student-records/) | Student records system in C using structs, file I/O and dynamic memory. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-
+| 4 | [c-data-structures](./c-data-structures/) | Implementation of linked lists, stacks, queues, trees in C with pointers. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
+| 5 | [c-file-management-system](./c-file-management-system/) | File reading/writing system in C with binary and text file handling. | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
 ---
 
 ## 🧠 Key Concepts Covered
