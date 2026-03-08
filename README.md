@@ -51,7 +51,7 @@
 
 | Total Branches | Total Projects | Status |
 |:--------------:|:--------------:|--------|
-| 8 | 40 | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| 8 | 40 | ![Status](https://img.shields.io/badge/Status-Done-green?style=flat-square) |
 
 ---
 
