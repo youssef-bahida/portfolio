@@ -2,7 +2,7 @@
 
 > Implementation of common data structures in C.
 
-![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) ![Branch](https://img.shields.io/badge/Branch-desktop-development-purple?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) ![Branch](https://img.shields.io/badge/Branch-desktop-development?style=flat-square)
 
 ---
 
