@@ -22,7 +22,7 @@
 
 ## 📊 Branch Status
 
-![Projects](https://img.shields.io/badge/Projects-5-blue?style=flat-square) ![Branch](https://img.shields.io/badge/Branch-microsoft-office-suite?style=flat-square) ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square)
+![Projects](https://img.shields.io/badge/Projects-5-blue?style=flat-square) ![Branch](https://img.shields.io/badge/Branch-microsoft-office?style=flat-square) ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square)
 
 ---
 
