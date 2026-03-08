@@ -1,7 +1,15 @@
-#  Portfolio 
+<div align="center">
 
->  Software Engineering Graduate | Entry-Level Freelance Developer
->  Midelt, Morocco |</br> 🔗 [Upwork Profile](https://www.upwork.com) | ✉️ your.email@example.com
+<!-- Animated header banner -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:4B0082,50:6A0DAD,100:9B30FF&height=200&section=header&text=Portfolio&fontSize=55&fontColor=ffffff&fontAlignY=38&desc=Software%20Engineering%20Graduate%20%7C%20Entry-Level%20Freelance%20Developer&descAlignY=60&descColor=e0d7ff&animation=fadeIn"/>
+
+
+<!-- Typing animation -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1000&color=38BDF8&center=true&vCenter=true&width=750&lines=🌿+Branches+%7C+Domains;🛠️+Tech+Stack;📊+Portfolio+Progress;📬+Contact)](https://git.io/typing-svg)
+
+<br/>
+
+</div>
 
 ---
 
@@ -48,6 +56,17 @@
 ---
 
 ## 📬 Contact
-- ✉️ Email: your.email@example.com
-- 💼 LinkedIn: linkedin.com/in/yourprofile
-- 💻 Upwork: upwork.com/freelancers/yourusername
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
+[![Upwork](https://img.shields.io/badge/Upwork-6FDA44?style=for-the-badge&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/yourusername)
+
+</div>
+
+<div align="center">
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:4B0082,50:6A0DAD,100:9B30FF&height=100&section=footer"/>
+
+</div>
