@@ -1,7 +1,7 @@
 # 💼 Portfolio — YOUSSEF BAHIDA
 
 > 🎓 Software Engineering Graduate | Entry-Level Freelance Developer
-> 📍 Fes, Morocco | 🔗 [Upwork Profile](https://www.upwork.com) | ✉️ your.email@example.com
+> 📍 Midelt, Morocco | 🔗 [Upwork Profile](https://www.upwork.com) | ✉️ your.email@example.com
 
 ---
 
