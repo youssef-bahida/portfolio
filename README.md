@@ -17,12 +17,12 @@
 
 | Branch | Domain | Key Skills | Status |
 |--------|--------|------------|--------|
-| [`data-analysis`](../../tree/data-analysis) | 📊 Data Analysis | Python, SQL, Pandas, Talend ETL | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
-| [`web-development`](../../tree/web-development) | 🌐 Web Development | HTML, CSS, JS, React, Laravel, Node.js | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| [`data-analysis`](../../tree/data-analysis) | 📊 Data Analysis | Python, SQL, Pandas, Talend ETL, Visualisation | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| [`web-development`](../../tree/web-development) | 🌐 Web Development | HTML, CSS, JS, Angular, React, Laravel, Node | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
 | [`desktop-development`](../../tree/desktop-development) | 🖥️ Desktop Development | Java, JavaFX, C | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
 | [`devops-cloud`](../../tree/devops-cloud) | ⚙️ DevOps & Cloud | Docker, Linux, AWS, Bash | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
 | [`microsoft-office-suite`](../../tree/microsoft-office-suite) | 📋 Microsoft Office Suite | Excel, Word, PowerPoint | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
-| [`networking-security`](../../tree/networking-security) | 🔐 Networking & Security | Cisco, TCP/IP, Linux Security | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| [`networking-security`](../../tree/networking-security) | 🔐 Networking & Security | Cyber security basics, Cisco, Encryption, Linux | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
 | [`scripting-automation`](../../tree/scripting-automation) | 🤖 Scripting & Automation | Python, Bash, Web Scraping | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
 | [`machine-learning`](../../tree/machine-learning) | 🧠 Machine Learning | Scikit-learn, TensorFlow, NLP | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
 
@@ -43,7 +43,45 @@
 ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white) ![Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoftword&logoColor=white) ![PowerPoint](https://img.shields.io/badge/PowerPoint-B7472A?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white) ![VBA](https://img.shields.io/badge/VBA-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
 
 **Networking**</br>
-![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white) ![TCP/IP](https://img.shields.io/badge/TCP%2FIP-0078D4?style=for-the-badge&logo=internetexplorer&logoColor=white) ![Firewalls](https://img.shields.io/badge/Firewalls-FF6600?style=for-the-badge&logo=fortinet&logoColor=white)
+![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
+![TCP/IP](https://img.shields.io/badge/TCP%2FIP-005C99?style=for-the-badge&logo=cloudflare&logoColor=white)
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)
+![pfSense](https://img.shields.io/badge/pfSense-212121?style=for-the-badge&logo=pfsense&logoColor=white)
+![VPN](https://img.shields.io/badge/VPN-FF6B35?style=for-the-badge&logo=wireguard&logoColor=white)
+![Nmap](https://img.shields.io/badge/Nmap-0E83CD?style=for-the-badge&logo=nmap&logoColor=white)
+
+## 🛡️ Cyber Security
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
+![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=for-the-badge&logo=metasploit&logoColor=white)
+![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=burpsuite&logoColor=white)
+![OWASP](https://img.shields.io/badge/OWASP-000000?style=for-the-badge&logo=owasp&logoColor=white)
+![SQLMap](https://img.shields.io/badge/SQLMap-CC0000?style=for-the-badge&logo=databricks&logoColor=white)
+![Hydra](https://img.shields.io/badge/Hydra-1a1a1a?style=for-the-badge&logo=gnubash&logoColor=white)
+![John the Ripper](https://img.shields.io/badge/John_The_Ripper-CC0000?style=for-the-badge&logo=linux&logoColor=white)
+![Aircrack-ng](https://img.shields.io/badge/Aircrack--ng-1679A7?style=for-the-badge&logo=wifi&logoColor=white)
+![OpenSSL](https://img.shields.io/badge/OpenSSL-721412?style=for-the-badge&logo=openssl&logoColor=white)
+![GPG](https://img.shields.io/badge/GPG-0093DD?style=for-the-badge&logo=gnuprivacyguard&logoColor=white)
+![KP--ABE](https://img.shields.io/badge/KP--ABE-00D4FF?style=for-the-badge&logo=keybase&logoColor=white)
+![CP--ABE](https://img.shields.io/badge/CP--ABE-00E676?style=for-the-badge&logo=keybase&logoColor=white)
+![TLS/SSL](https://img.shields.io/badge/TLS%2FSSL-4285F4?style=for-the-badge&logo=letsencrypt&logoColor=white)
+![AES-256](https://img.shields.io/badge/AES--256-FF6B35?style=for-the-badge&logo=shield&logoColor=white)
+![SELinux](https://img.shields.io/badge/SELinux-CC0000?style=for-the-badge&logo=redhat&logoColor=white)
+![AppArmor](https://img.shields.io/badge/AppArmor-0078D7?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Vault](https://img.shields.io/badge/Vault-FFCD00?style=for-the-badge&logo=vault&logoColor=black)
+![CIS Benchmark](https://img.shields.io/badge/CIS_Benchmark-003366?style=for-the-badge&logoColor=white)
+![SIEM](https://img.shields.io/badge/SIEM-212121?style=for-the-badge&logo=elastic&logoColor=white)
+![Splunk](https://img.shields.io/badge/Splunk-000000?style=for-the-badge&logo=splunk&logoColor=white)
+![ELK Stack](https://img.shields.io/badge/ELK_Stack-005571?style=for-the-badge&logo=elasticstack&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Wazuh](https://img.shields.io/badge/Wazuh-3A86FF?style=for-the-badge&logoColor=white)
+![Firewall](https://img.shields.io/badge/Firewall-FF0000?style=for-the-badge&logo=fortinet&logoColor=white)
+![iptables](https://img.shields.io/badge/iptables-333333?style=for-the-badge&logo=linux&logoColor=white)
+![Snort](https://img.shields.io/badge/Snort-CC0000?style=for-the-badge&logo=snort&logoColor=white)
+![Suricata](https://img.shields.io/badge/Suricata-F26722?style=for-the-badge&logoColor=white)
+![Fail2Ban](https://img.shields.io/badge/Fail2Ban-CC0000?style=for-the-badge&logo=linux&logoColor=white)
+
+
+
 
 ---
 
