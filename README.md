@@ -5,7 +5,7 @@
 
 
 <!-- Typing animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1000&color=38BDF8&center=true&vCenter=true&width=750&lines=🌿+Branches+%7C+Domains;🛠️+Tech+Stack;📊+Portfolio+Progress;📬+Contact)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1000&color=38BDF8&center=true&vCenter=true&width=750&lines=☁️+Branches+%7C+Domains;🛠️+Tech+Stack;📊+Portfolio+Progress;📬+Contact)](https://git.io/typing-svg)
 
 <br/>
 
@@ -13,7 +13,7 @@
 
 ---
 
-## 🌿 Branches — Domains
+##  Branches — Domains
 
 | Branch | Domain | Key Skills | Status |
 |--------|--------|------------|--------|
@@ -29,6 +29,10 @@
 ---
 
 ## 🛠️ Tech Stack
+
+**Modeling & Design** <br/>
+![UML](https://img.shields.io/badge/UML-FABD14?style=for-the-badge&logo=uml&logoColor=black)
+![Merise](https://img.shields.io/badge/Merise-6C3483?style=for-the-badge&logo=databricks&logoColor=white)
 
 **Languages**</br>
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
@@ -50,7 +54,7 @@
 ![VPN](https://img.shields.io/badge/VPN-FF6B35?style=for-the-badge&logo=wireguard&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Nmap-0E83CD?style=for-the-badge&logo=nmap&logoColor=white)
 
-## 🛡️ Cyber Security
+**Cyber Security** </br>
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=for-the-badge&logo=metasploit&logoColor=white)
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=burpsuite&logoColor=white)
