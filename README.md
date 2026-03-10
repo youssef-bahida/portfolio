@@ -18,13 +18,13 @@
 | Branch | Domain | Key Skills | Status |
 |--------|--------|------------|--------|
 | [`data-analysis`](../../tree/data-analysis) | 📊 Data Analysis | Python, SQL, Pandas, Talend ETL | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
-| [`web-development`](../../tree/web-development) | 🌐 Web Development | HTML, CSS, JS, React, Laravel, Node.js | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| [`desktop-development`](../../tree/desktop-development) | 🖥️ Desktop Development | Java, JavaFX, C | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| [`devops-cloud`](../../tree/devops-cloud) | ⚙️ DevOps & Cloud | Docker, Linux, AWS, Bash | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| [`microsoft-office-suite`](../../tree/microsoft-office-suite) | 📋 Microsoft Office Suite | Excel, Word, PowerPoint | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| [`networking-security`](../../tree/networking-security) | 🔐 Networking & Security | Cisco, TCP/IP, Linux Security | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| [`scripting-automation`](../../tree/scripting-automation) | 🤖 Scripting & Automation | Python, Bash, Web Scraping | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
-| [`machine-learning`](../../tree/machine-learning) | 🧠 Machine Learning | Scikit-learn, TensorFlow, NLP | ![Status](https://img.shields.io/badge/Status-Planned-lightgrey?style=flat-square) |
+| [`web-development`](../../tree/web-development) | 🌐 Web Development | HTML, CSS, JS, React, Laravel, Node.js | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| [`desktop-development`](../../tree/desktop-development) | 🖥️ Desktop Development | Java, JavaFX, C | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| [`devops-cloud`](../../tree/devops-cloud) | ⚙️ DevOps & Cloud | Docker, Linux, AWS, Bash | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| [`microsoft-office-suite`](../../tree/microsoft-office-suite) | 📋 Microsoft Office Suite | Excel, Word, PowerPoint | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| [`networking-security`](../../tree/networking-security) | 🔐 Networking & Security | Cisco, TCP/IP, Linux Security | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| [`scripting-automation`](../../tree/scripting-automation) | 🤖 Scripting & Automation | Python, Bash, Web Scraping | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
+| [`machine-learning`](../../tree/machine-learning) | 🧠 Machine Learning | Scikit-learn, TensorFlow, NLP | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
 
 ---
 
@@ -51,7 +51,7 @@
 
 | Total Branches | Total Projects | Status |
 |:--------------:|:--------------:|--------|
-| 8 | 40 | ![Status](https://img.shields.io/badge/Status-Done-green?style=flat-square) |
+| 8 | 40 | ![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square) |
 
 ---
 
