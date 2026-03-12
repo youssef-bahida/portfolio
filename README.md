@@ -1,234 +1,211 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-<img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-<img src="https://img.shields.io/badge/Canvas_API-Native-00E5CC?style=for-the-badge" />
-<img src="https://img.shields.io/badge/No_Backend-100%25_Client-44FF88?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge&logo=vercel" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1e,50:003d33,100:00e5cc&height=220&section=header&text=Image%20Processing&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Computer%20Vision%20%7C%20Algorithms%20%7C%20Web%20Implementations&descAlignY=60&descColor=00e5cc&animation=fadeIn"/>
 
-<br/><br/>
+<br/>
 
-```
-  ⬡  IMAGE LAB
-     Vision par Ordinateur · TP1
-```
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1200&color=00E5CC&center=true&vCenter=true&width=700&lines=🔬+Pixel-level+algorithms+from+scratch;🎨+MATLAB+operations+→+Browser+Canvas+API;🧠+Noise+%7C+Filters+%7C+Transforms+%7C+Segmentation;⚡+Zero+dependencies+%7C+100%25+Client-side)](https://git.io/typing-svg)
 
-# Image Processing Laboratory
+<br/>
 
-**A full reimplementation of MATLAB TP1 image processing operations —  
-directly in the browser using native Canvas API. No backend. No dependencies.**
-
-[🌐 Live Demo](https://image-lab-nine.vercel.app) · [📂 Source Code](https://github.com/youssef-bahida/Portfolio/tree/Image-Processing) · [👤 Youssef Bahida](https://github.com/youssef-bahida)
+![Projects](https://img.shields.io/badge/Projects-4-00E5CC?style=for-the-badge)
+![Language](https://img.shields.io/badge/JavaScript-ES2023-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Canvas](https://img.shields.io/badge/Canvas_API-Native-00E5CC?style=for-the-badge)
+![No Backend](https://img.shields.io/badge/Backend-None-44FF88?style=for-the-badge)
 
 </div>
 
 ---
 
-## 📸 Screenshots
+<div align="center">
 
-### RGB Channel Separation
-![RGB Channels](./screenshots/rgb-channels.png)
+## ⬡ Branch Overview
 
-### Color Space Conversions
-![Conversions](./screenshots/conversions.png)
+*Each project in this branch is a standalone web application that implements  
+image processing algorithms natively in the browser — no Python, no backend, no OpenCV.*  
+*Just mathematics, Canvas API, and React.*
 
-### Geometric Transformations
-![Transformations](./screenshots/transforms.png)
-
----
-
-## 🧠 What This Project Does
-
-This project translates every MATLAB operation from a Computer Vision lab assignment into pure JavaScript using the browser's native Canvas API. Each algorithm is documented with its mathematical foundation and its direct MATLAB equivalent.
-
-| MATLAB Operation | JavaScript Implementation | Algorithm |
-|---|---|---|
-| `imread()` | `FileReader` + `HTMLImageElement` | File decoding |
-| `image(:,:,1)` | RGBA byte array (stride 4) | Tensor slicing |
-| `im2gray()` | `0.299R + 0.587G + 0.114B` | Rec.601 Luminance |
-| `imbinarize()` | Otsu's method | Inter-class variance maximization |
-| `rgb2ind(img,16)` | Uniform quantization per channel | Color reduction |
-| `imresize()` | `imageSmoothingQuality: "high"` | Bilinear interpolation |
-| `imrotate()` | Canvas affine transform | Geometric rotation |
-| `subplot()` | CSS Grid + per-cell canvas | Layout system |
+</div>
 
 ---
 
-## ✨ Features
+## 🗂️ Projects
 
-### Q1 — RGB Channel Separation
-Isolates each color plane by zeroing the other two channels, matching MATLAB's matrix slicing behavior.
-- Red channel `(R, 0, 0)`
-- Green channel `(0, G, 0)`  
-- Blue channel `(0, 0, B)`
+<table>
+<thead>
+<tr>
+<th align="center">Project</th>
+<th align="center">Domain</th>
+<th align="center">Algorithms</th>
+<th align="center">Live</th>
+<th align="center">Status</th>
+</tr>
+</thead>
+<tbody>
 
-### Q2 — Double Normalization
-Demonstrates the difference between raw `double()` conversion (all white — values > 1.0) and proper `im2double()` normalization into `[0.0, 1.0]`.
+<tr>
+<td>
+<a href="./image-lab"><b>⬡ Image Lab</b></a><br/>
+<sub>Basics of image processing</sub>
+</td>
+<td align="center">🎨 Fundamentals</td>
+<td>RGB channels · Grayscale (Rec.601) · Otsu binarization · Color quantization · Affine transforms</td>
+<td align="center"><a href="https://image-lab-nine.vercel.app"><img src="https://img.shields.io/badge/Live-00E5CC?style=flat-square&logo=vercel&logoColor=black"/></a></td>
+<td align="center"><img src="https://img.shields.io/badge/✓_Done-00E5CC?style=flat-square"/></td>
+</tr>
 
-### Q3 — Type Conversions
-- **Grayscale** — perceptual luminance formula (Rec.601)
-- **Binary** — automatic thresholding via Otsu's algorithm (maximizes inter-class variance)
-- **Indexed** — color quantization to 16 colors via uniform channel discretization
+<tr>
+<td>
+<a href="./image-noise"><b>〰 Image Noise</b></a><br/>
+<sub>Noise models & denoising filters</sub>
+</td>
+<td align="center">🔊 Noise & Filters</td>
+<td>Gaussian · Salt & Pepper · Poisson · Speckle · Mean/Median/Bilateral filter</td>
+<td align="center"><img src="https://img.shields.io/badge/Soon-555?style=flat-square"/></td>
+<td align="center"><img src="https://img.shields.io/badge/In_Progress-yellow?style=flat-square"/></td>
+</tr>
 
-### Q4 — Geometric Transforms
-- Resize ×0.5 and ×2.0 with bilinear interpolation
-- Rotation 45° and 90° via affine canvas transformation
+<tr>
+<td>
+<b>◈ Image Filters</b><br/>
+<sub>Spatial & frequency domain filters</sub>
+</td>
+<td align="center">🌊 Filtering</td>
+<td>Sobel · Laplacian · Sharpen · Emboss · FFT low/high-pass</td>
+<td align="center"><img src="https://img.shields.io/badge/Soon-555?style=flat-square"/></td>
+<td align="center"><img src="https://img.shields.io/badge/Planned-555?style=flat-square"/></td>
+</tr>
+
+<tr>
+<td>
+<b>⟁ Advanced Vision</b><br/>
+<sub>Segmentation & feature detection</sub>
+</td>
+<td align="center">🧠 Advanced</td>
+<td>Canny edge detection · Hough transform · Histogram equalization · Morphological ops</td>
+<td align="center"><img src="https://img.shields.io/badge/Soon-555?style=flat-square"/></td>
+<td align="center"><img src="https://img.shields.io/badge/Planned-555?style=flat-square"/></td>
+</tr>
+
+</tbody>
+</table>
 
 ---
 
-## 🔐 Security
+## 🧮 Algorithms Covered
 
-File upload includes multiple validation layers — because file extensions alone are **not trustworthy**:
+<div align="center">
 
-| Layer | Method | Protects Against |
-|---|---|---|
-| MIME type check | `file.type` validation | Wrong format declaration |
-| Magic bytes | First 4 bytes signature (`FFD8FF` for JPEG) | Extension spoofing |
-| Size limit | Max 10 MB | DoS / memory attacks |
-| No server | 100% client-side processing | Data leakage |
+### Pixel & Color Space
+![RGB](https://img.shields.io/badge/RGB_Channels-FF4444,44FF88,4488FF?style=flat-square)
+![Grayscale](https://img.shields.io/badge/Grayscale_Rec.601-aaaaaa?style=flat-square)
+![HSV](https://img.shields.io/badge/HSV_Colorspace-ffaa00?style=flat-square)
+![Normalization](https://img.shields.io/badge/Double_Normalization-00e5cc?style=flat-square)
+![Quantization](https://img.shields.io/badge/Color_Quantization-aa88ff?style=flat-square)
 
-```js
-// Magic bytes validation — more reliable than file extension
-const signatures = {
-  jpeg: [0xFF, 0xD8, 0xFF],
-  png:  [0x89, 0x50, 0x4E, 0x47],
-  webp: [0x52, 0x49, 0x46, 0x46],
-  gif:  [0x47, 0x49, 0x46],
-};
+### Thresholding & Segmentation
+![Otsu](https://img.shields.io/badge/Otsu's_Method-00ffcc?style=flat-square)
+![Adaptive](https://img.shields.io/badge/Adaptive_Threshold-ffaa00?style=flat-square)
+![Kmeans](https://img.shields.io/badge/K--means_Clustering-ff4488?style=flat-square)
+
+### Noise Models
+![Gaussian](https://img.shields.io/badge/Gaussian_Noise-ff4444?style=flat-square)
+![SaltPepper](https://img.shields.io/badge/Salt_%26_Pepper-ffffff?style=flat-square)
+![Poisson](https://img.shields.io/badge/Poisson_Noise-44ff88?style=flat-square)
+![Speckle](https://img.shields.io/badge/Speckle_Noise-aa88ff?style=flat-square)
+
+### Spatial Filters
+![Mean](https://img.shields.io/badge/Mean_Filter-4488ff?style=flat-square)
+![Median](https://img.shields.io/badge/Median_Filter-00e5cc?style=flat-square)
+![Gaussian](https://img.shields.io/badge/Gaussian_Filter-ffaa00?style=flat-square)
+![Bilateral](https://img.shields.io/badge/Bilateral_Filter-ff4444?style=flat-square)
+
+### Edge & Feature Detection
+![Sobel](https://img.shields.io/badge/Sobel_Operator-ff4488?style=flat-square)
+![Laplacian](https://img.shields.io/badge/Laplacian-aa88ff?style=flat-square)
+![Canny](https://img.shields.io/badge/Canny_Edge-00e5cc?style=flat-square)
+![Hough](https://img.shields.io/badge/Hough_Transform-ffaa00?style=flat-square)
+
+### Geometric Transforms
+![Resize](https://img.shields.io/badge/Bilinear_Resize-44ff88?style=flat-square)
+![Rotate](https://img.shields.io/badge/Affine_Rotation-ff4444?style=flat-square)
+![Flip](https://img.shields.io/badge/Flip_%26_Mirror-4488ff?style=flat-square)
+
+</div>
+
+---
+
+## ⚙️ How Each Project Is Built
+
+```
+Every project follows the same architecture pattern :
+
+  MATLAB operation          Browser equivalent
+  ─────────────────         ──────────────────────────────────────
+  imread()              →   FileReader + HTMLImageElement
+  image(:,:,1)          →   ImageData RGBA byte array (stride 4)
+  imfilter()            →   Manual 2D convolution kernel
+  fspecial('gaussian')  →   Gaussian kernel generation
+  imnoise()             →   Statistical random pixel perturbation
+  imshow()              →   ctx.putImageData() on <canvas>
+  subplot()             →   CSS Grid + one canvas per cell
 ```
 
 ---
 
-## 🏗️ Architecture
+## 🔐 Security Model
+
+All projects share the same **client-side security approach** :
 
 ```
-src/
-├── App.jsx                   # Root component — global state management
-├── main.jsx                  # React entry point
-├── components/
-│   ├── Header.jsx            # App header with branding
-│   ├── ImageUploader.jsx     # Secure drag & drop upload
-│   └── ResultsGrid.jsx       # Results grid (subplot equivalent)
-├── utils/
-│   └── imageProcessing.js   # All processing algorithms (pure functions)
-└── styles/
-    └── global.css            # Design system — "Lab Noir" aesthetic
-```
-
-**Architecture principles:**
-- **Separation of concerns** — all processing logic isolated in `utils/`
-- **Pure functions** — every transform returns a new `ImageData`, no mutation
-- **Zero side effects** — components are pure renderers
-- **Accessibility** — `role`, `aria-label`, full keyboard navigation
-
----
-
-## 📐 Core Algorithms
-
-### ImageData — the fundamental structure
-```js
-// A 100×100 RGB image = flat array of 100×100×4 = 40,000 bytes
-// Layout: [R, G, B, A, R, G, B, A, ...]
-const pixelOffset = row * (width * 4) + col * 4;
-const R = imageData.data[pixelOffset];
-const G = imageData.data[pixelOffset + 1];
-const B = imageData.data[pixelOffset + 2];
-```
-
-### Otsu's Thresholding
-```js
-// Maximizes inter-class variance between background and foreground
-// σ²_B(T) = ω_B(T) · ω_F(T) · [μ_B(T) − μ_F(T)]²
-// T* = argmax σ²_B(T)   for T in [0, 255]
-```
-
-### Rec.601 Grayscale
-```js
-// Perceptual weights — human eye is most sensitive to green
-const Y = Math.round(0.299 * R + 0.587 * G + 0.114 * B);
+Upload validation
+  ├── MIME type check          (declared type)
+  ├── Magic bytes verification (actual file signature)
+  ├── File size limit          (max 10 MB — DoS protection)
+  └── No server upload         (data never leaves the browser)
 ```
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js ≥ 18
-- npm ≥ 9
-
-### Installation
+## 🚀 Run Any Project Locally
 
 ```bash
-# Clone the repository
+# 1. Clone the Portfolio repository
 git clone https://github.com/youssef-bahida/Portfolio.git
 cd Portfolio
 
-# Switch to the Image-Processing branch
+# 2. Switch to this branch
 git checkout Image-Processing
 
-# Install dependencies
-npm install
+# 3. Navigate to the project you want
+cd image-lab        # or image-noise, etc.
 
-# Start development server
+# 4. Install & run
+npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-### Build for Production
-
-```bash
-npm run build    # outputs to /dist
-npm run preview  # preview production build locally
-```
-
 ---
 
-## 🌐 Deployment
+## 📊 Branch Progress
 
-This project is deployed on **Vercel** (free Hobby plan).
-
-Every push to the `Image-Processing` branch triggers an automatic redeploy.
-
-```bash
-# Manual deploy via CLI
-npm install -g vercel
-vercel --prod
-```
-
-🔗 **Live:** [https://image-lab-nine.vercel.app](https://image-lab-nine.vercel.app)
-
----
-
-## 🛠️ Tech Stack
-
-| Technology | Role | Why |
-|---|---|---|
-| **React 18** | UI framework | Declarative rendering, hooks |
-| **Vite 5** | Build tool | Instant HMR, fast builds |
-| **Canvas API** | Image processing | Native pixel access, no library needed |
-| **CSS Custom Properties** | Design system | Consistent theming |
-| **Syne** | Display font | Technical, distinctive |
-| **JetBrains Mono** | Code font | Readable monospace |
-
-**Zero image processing dependencies** — everything is implemented from scratch using native browser APIs.
-
----
-
-## 👤 Author
-
-**Youssef Bahida**  
-MST SIDI · 2026  
-[github.com/youssef-bahida](https://github.com/youssef-bahida)
-
----
-
-## 📄 License
-
-MIT — free to use, modify, and distribute.
+| Category | Projects | Completion |
+|:---:|:---:|:---:|
+| Fundamentals | 1 / 1 | ![100%](https://img.shields.io/badge/100%25-00E5CC?style=flat-square) |
+| Noise & Filters | 0 / 1 | ![0%](https://img.shields.io/badge/In_Progress-yellow?style=flat-square) |
+| Spatial Filtering | 0 / 1 | ![0%](https://img.shields.io/badge/Planned-555?style=flat-square) |
+| Advanced Vision | 0 / 1 | ![0%](https://img.shields.io/badge/Planned-555?style=flat-square) |
+| **Total** | **1 / 4** | ![25%](https://img.shields.io/badge/25%25-ffaa00?style=flat-square) |
 
 ---
 
 <div align="center">
-<sub>Built with Canvas API · React · Vite · Deployed on Vercel</sub>
+
+**[← Back to Portfolio](../../tree/main)**
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00e5cc,50:003d33,100:0a0f1e&height=100&section=footer"/>
+
+*Youssef Bahida · MST SIDI · 2026*
+
 </div>
