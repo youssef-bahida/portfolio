@@ -12,7 +12,7 @@
 ![Language](https://img.shields.io/badge/JavaScript-ES2023-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Canvas](https://img.shields.io/badge/Canvas_API-Native-00E5CC?style=for-the-badge)
-![No Backend](https://img.shields.io/badge/Backend-None-44FF88?style=for-the-badge)
+![No Backend](https://img.shields.io/badge/Backend-Fast-44FF88?style=for-the-badge)
 
 </div>
 
