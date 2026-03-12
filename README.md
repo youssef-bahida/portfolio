@@ -1,59 +1,101 @@
-# ⬡ Image Processing Laboratory
+<div align="center">
 
-> Conversion complète du TP1 de traitement d'image (MATLAB) en application web React native — sans backend, sans dépendances de traitement d'image, 100% Canvas API.
+<img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+<img src="https://img.shields.io/badge/Canvas_API-Native-00E5CC?style=for-the-badge" />
+<img src="https://img.shields.io/badge/No_Backend-100%25_Client-44FF88?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge&logo=vercel" />
 
-**Auteur :** Youssef Bahida · MST SIDI · 2026  
-**Stack :** React 18 · Vite · Canvas API · JavaScript ES2023
+<br/><br/>
 
----
+```
+  ⬡  IMAGE LAB
+     Vision par Ordinateur · TP1
+```
 
-## 🎯 Objectif
+# Image Processing Laboratory
 
-Ce projet traduit les algorithmes MATLAB du TP1 en JavaScript natif via l'API Canvas du navigateur. Chaque opération MATLAB a son équivalent direct documenté dans le code.
+**A full reimplementation of MATLAB TP1 image processing operations —  
+directly in the browser using native Canvas API. No backend. No dependencies.**
 
-| MATLAB | JavaScript (Canvas API) |
-|--------|------------------------|
-| `imread()` | `FileReader` + `HTMLImageElement` |
-| `image(:,:,1)` | Accès direct aux bytes RGBA (stride 4) |
-| `im2gray()` | Luminance Rec.601 : `Y = 0.299R + 0.587G + 0.114B` |
-| `imbinarize()` | Algorithme d'Otsu (variance inter-classe maximale) |
-| `rgb2ind(img, 16)` | Quantification uniforme par canal |
-| `imresize()` | Interpolation bilinéaire (`imageSmoothingQuality`) |
-| `imrotate()` | Transformation affine canvas (`rotate()`) |
-| `subplot()` | Grille CSS Grid avec canvas par cellule |
+[🌐 Live Demo](https://image-lab-nine.vercel.app) · [📂 Source Code](https://github.com/youssef-bahida/Portfolio/tree/Image-Processing) · [👤 Youssef Bahida](https://github.com/youssef-bahida)
 
----
-
-## ✨ Fonctionnalités
-
-### Question 1 — Séparation des canaux RGB
-- Isolation du canal Rouge `(R, 0, 0)`
-- Isolation du canal Vert  `(0, G, 0)`
-- Isolation du canal Bleu  `(0, 0, B)`
-
-### Question 2 — Normalisation double
-- `double(image)` — valeurs > 1 → tout blanc
-- `double(image)/255` — normalisation `[0.0, 1.0]`
-
-### Question 3 — Conversions
-- **Niveaux de gris** : formule luminance perceptuelle Rec.601
-- **Image binaire** : seuillage automatique par méthode d'Otsu
-- **Image indexée** : quantification à 16 couleurs
-
-### Question 4 — Transformations géométriques
-- Resize ×0.5 et ×2.0 (interpolation bilinéaire)
-- Rotation 45° et 90° (transformation affine)
+</div>
 
 ---
 
-## 🔐 Sécurité
+## 📸 Screenshots
 
-L'upload de fichiers intègre plusieurs couches de validation :
+### RGB Channel Separation
+![RGB Channels](./screenshots/rgb-channels.png)
 
-1. **Validation MIME type** — vérification du type déclaré
-2. **Magic bytes** — vérification des octets de signature du fichier (JPEG: `FFD8FF`, PNG: `89504E47`, etc.) — résistant au renommage d'extension
-3. **Limite de taille** — max 10 MB pour prévenir les attaques DoS
-4. **Pas de serveur** — aucune donnée ne quitte le navigateur
+### Color Space Conversions
+![Conversions](./screenshots/conversions.png)
+
+### Geometric Transformations
+![Transformations](./screenshots/transforms.png)
+
+---
+
+## 🧠 What This Project Does
+
+This project translates every MATLAB operation from a Computer Vision lab assignment into pure JavaScript using the browser's native Canvas API. Each algorithm is documented with its mathematical foundation and its direct MATLAB equivalent.
+
+| MATLAB Operation | JavaScript Implementation | Algorithm |
+|---|---|---|
+| `imread()` | `FileReader` + `HTMLImageElement` | File decoding |
+| `image(:,:,1)` | RGBA byte array (stride 4) | Tensor slicing |
+| `im2gray()` | `0.299R + 0.587G + 0.114B` | Rec.601 Luminance |
+| `imbinarize()` | Otsu's method | Inter-class variance maximization |
+| `rgb2ind(img,16)` | Uniform quantization per channel | Color reduction |
+| `imresize()` | `imageSmoothingQuality: "high"` | Bilinear interpolation |
+| `imrotate()` | Canvas affine transform | Geometric rotation |
+| `subplot()` | CSS Grid + per-cell canvas | Layout system |
+
+---
+
+## ✨ Features
+
+### Q1 — RGB Channel Separation
+Isolates each color plane by zeroing the other two channels, matching MATLAB's matrix slicing behavior.
+- Red channel `(R, 0, 0)`
+- Green channel `(0, G, 0)`  
+- Blue channel `(0, 0, B)`
+
+### Q2 — Double Normalization
+Demonstrates the difference between raw `double()` conversion (all white — values > 1.0) and proper `im2double()` normalization into `[0.0, 1.0]`.
+
+### Q3 — Type Conversions
+- **Grayscale** — perceptual luminance formula (Rec.601)
+- **Binary** — automatic thresholding via Otsu's algorithm (maximizes inter-class variance)
+- **Indexed** — color quantization to 16 colors via uniform channel discretization
+
+### Q4 — Geometric Transforms
+- Resize ×0.5 and ×2.0 with bilinear interpolation
+- Rotation 45° and 90° via affine canvas transformation
+
+---
+
+## 🔐 Security
+
+File upload includes multiple validation layers — because file extensions alone are **not trustworthy**:
+
+| Layer | Method | Protects Against |
+|---|---|---|
+| MIME type check | `file.type` validation | Wrong format declaration |
+| Magic bytes | First 4 bytes signature (`FFD8FF` for JPEG) | Extension spoofing |
+| Size limit | Max 10 MB | DoS / memory attacks |
+| No server | 100% client-side processing | Data leakage |
+
+```js
+// Magic bytes validation — more reliable than file extension
+const signatures = {
+  jpeg: [0xFF, 0xD8, 0xFF],
+  png:  [0x89, 0x50, 0x4E, 0x47],
+  webp: [0x52, 0x49, 0x46, 0x46],
+  gif:  [0x47, 0x49, 0x46],
+};
+```
 
 ---
 
@@ -61,89 +103,132 @@ L'upload de fichiers intègre plusieurs couches de validation :
 
 ```
 src/
-├── App.jsx                    # Composant racine, gestion d'état global
-├── main.jsx                   # Point d'entrée React
+├── App.jsx                   # Root component — global state management
+├── main.jsx                  # React entry point
 ├── components/
-│   ├── Header.jsx             # En-tête de l'application
-│   ├── ImageUploader.jsx      # Upload sécurisé avec drag & drop
-│   └── ResultsGrid.jsx        # Grille de résultats (équivalent subplot)
+│   ├── Header.jsx            # App header with branding
+│   ├── ImageUploader.jsx     # Secure drag & drop upload
+│   └── ResultsGrid.jsx       # Results grid (subplot equivalent)
 ├── utils/
-│   └── imageProcessing.js     # Tous les algorithmes de traitement
+│   └── imageProcessing.js   # All processing algorithms (pure functions)
 └── styles/
-    └── global.css             # Design system complet
+    └── global.css            # Design system — "Lab Noir" aesthetic
 ```
 
-**Principes d'architecture :**
-- **Séparation des responsabilités** : la logique de traitement est totalement isolée dans `utils/`
-- **Composants purs** : les composants React ne font que du rendu
-- **Pas d'effets de bord** : toutes les transformations retournent un nouvel `ImageData`
-- **Accessibilité** : `role`, `aria-label`, navigation clavier
+**Architecture principles:**
+- **Separation of concerns** — all processing logic isolated in `utils/`
+- **Pure functions** — every transform returns a new `ImageData`, no mutation
+- **Zero side effects** — components are pure renderers
+- **Accessibility** — `role`, `aria-label`, full keyboard navigation
 
 ---
 
-## 🚀 Installation et lancement
+## 📐 Core Algorithms
+
+### ImageData — the fundamental structure
+```js
+// A 100×100 RGB image = flat array of 100×100×4 = 40,000 bytes
+// Layout: [R, G, B, A, R, G, B, A, ...]
+const pixelOffset = row * (width * 4) + col * 4;
+const R = imageData.data[pixelOffset];
+const G = imageData.data[pixelOffset + 1];
+const B = imageData.data[pixelOffset + 2];
+```
+
+### Otsu's Thresholding
+```js
+// Maximizes inter-class variance between background and foreground
+// σ²_B(T) = ω_B(T) · ω_F(T) · [μ_B(T) − μ_F(T)]²
+// T* = argmax σ²_B(T)   for T in [0, 255]
+```
+
+### Rec.601 Grayscale
+```js
+// Perceptual weights — human eye is most sensitive to green
+const Y = Math.round(0.299 * R + 0.587 * G + 0.114 * B);
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js ≥ 18
+- npm ≥ 9
+
+### Installation
 
 ```bash
-# Cloner le repo
-git clone https://github.com/youssefbahida/image-lab.git
-cd image-lab
+# Clone the repository
+git clone https://github.com/youssef-bahida/Portfolio.git
+cd Portfolio
 
-# Installer les dépendances
+# Switch to the Image-Processing branch
+git checkout Image-Processing
+
+# Install dependencies
 npm install
 
-# Lancer en développement
+# Start development server
 npm run dev
-
-# Build de production
-npm run build
 ```
 
-Ouvre [http://localhost:5173](http://localhost:5173) dans ton navigateur.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for Production
+
+```bash
+npm run build    # outputs to /dist
+npm run preview  # preview production build locally
+```
 
 ---
 
-## 🌐 Déploiement (Vercel)
+## 🌐 Deployment
+
+This project is deployed on **Vercel** (free Hobby plan).
+
+Every push to the `Image-Processing` branch triggers an automatic redeploy.
 
 ```bash
+# Manual deploy via CLI
 npm install -g vercel
 vercel --prod
 ```
 
-Ou connecte le repo GitHub à [vercel.com](https://vercel.com) pour un déploiement automatique à chaque push.
+🔗 **Live:** [https://image-lab-nine.vercel.app](https://image-lab-nine.vercel.app)
 
 ---
 
-## 📚 Concepts clés
+## 🛠️ Tech Stack
 
-### ImageData — la structure de base
-```js
-// Une image RGB de 100×100 = tableau plat de 100×100×4 = 40 000 octets
-// Ordre : [R, G, B, A, R, G, B, A, ...]
-const pixel_i_j = i * (width * 4) + j * 4;
-const R = imageData.data[pixel_i_j];
-const G = imageData.data[pixel_i_j + 1];
-const B = imageData.data[pixel_i_j + 2];
-```
+| Technology | Role | Why |
+|---|---|---|
+| **React 18** | UI framework | Declarative rendering, hooks |
+| **Vite 5** | Build tool | Instant HMR, fast builds |
+| **Canvas API** | Image processing | Native pixel access, no library needed |
+| **CSS Custom Properties** | Design system | Consistent theming |
+| **Syne** | Display font | Technical, distinctive |
+| **JetBrains Mono** | Code font | Readable monospace |
 
-### Algorithme d'Otsu
-```js
-// Maximise la variance inter-classe entre fond et avant-plan
-// σ²B(T) = ωB(T) · ωF(T) · [μB(T) − μF(T)]²
-// T* = argmax σ²B(T)
-```
+**Zero image processing dependencies** — everything is implemented from scratch using native browser APIs.
 
 ---
 
-## 🛠️ Technologies
+## 👤 Author
 
-- **React 18** — UI déclarative, hooks
-- **Vite 5** — bundler ultra-rapide, HMR
-- **Canvas API** — traitement pixel natif sans librairie
-- **CSS Custom Properties** — design system cohérent
-- **Google Fonts** — Syne (display) + JetBrains Mono (code)
+**Youssef Bahida**  
+MST SIDI · 2026  
+[github.com/youssef-bahida](https://github.com/youssef-bahida)
 
 ---
 
-## 📄 Licence
+## 📄 License
 
-MIT — Youssef Bahida, 2026
+MIT — free to use, modify, and distribute.
+
+---
+
+<div align="center">
+<sub>Built with Canvas API · React · Vite · Deployed on Vercel</sub>
+</div>
