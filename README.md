@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1200&color=00E5CC&center=true&vCenter=true&width=700&lines=🔬+Pixel-level+algorithms+from+scratch;🎨+MATLAB+operations+→+Browser+Canvas+API;🧠+Noise+%7C+Filters+%7C+Transforms+%7C+Segmentation;⚡+Zero+dependencies+%7C+100%25+Client-side)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1200&color=00E5CC&center=true&vCenter=true&width=700&lines=🔬+Pixel-level+algorithms;🎨+MATLAB++→+Canvas+API;⚡+Noise+%7C+Filters+%7C+Transforms+%7C+Segmentation;)](https://git.io/typing-svg)
 
 <br/>
 
