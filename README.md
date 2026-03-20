@@ -51,7 +51,7 @@ image processing algorithms natively in the browser — no Python, no backend, n
 </td>
 <td align="center">🎨 Fundamentals</td>
 <td>RGB channels · Grayscale (Rec.601) · Otsu binarization · Color quantization · Affine transforms</td>
-<td align="center"><a href="https://image-lab-nine.vercel.app"><img src="https://img.shields.io/badge/Live-00E5CC?style=flat-square&logo=vercel&logoColor=black"/></a></td>
+<td align="center"><a href="https://image-lab-nine.vercel.app/"><img src="https://img.shields.io/badge/Live-00E5CC?style=flat-square&logo=vercel&logoColor=black"/></a></td>
 <td align="center"><img src="https://img.shields.io/badge/✓_Done-00E5CC?style=flat-square"/></td>
 </tr>
 
