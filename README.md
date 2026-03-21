@@ -195,7 +195,7 @@ npm run dev
 | Noise & Filters | 1 / 1 | ![100%](https://img.shields.io/badge/100%25-00E5CC?style=flat-square)  |
 | Spatial Filtering | 1 / 1 |![100%](https://img.shields.io/badge/100%25-00E5CC?style=flat-square)  |
 | Advanced Vision | 0 / 1 | ![0%](https://img.shields.io/badge/Planned-555?style=flat-square) |
-| **Total** | **3 / 4** | ![25%](https://img.shields.io/badge/25%25-ffaa00?style=flat-square) |
+| **Total** | **3 / 4** | ![75%](https://img.shields.io/badge/25%25-ffaa00?style=flat-square) |
 
 ---
 
