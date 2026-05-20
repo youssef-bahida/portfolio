@@ -73,3 +73,12 @@ Converted files are saved **next to the originals**, so the mounted folder works
 - **Python 3.11** · **Tkinter** (GUI)
 - **FFmpeg** (libx264 + AAC, ultrafast preset)
 - **Threading** — UI stays responsive during conversion
+
+
+
+##RUN Container
+docker run --rm \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v /mnt/c/Users/bahid/Videos:/videos \
+  video-reducer
