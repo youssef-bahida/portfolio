@@ -77,8 +77,8 @@ Converted files are saved **next to the originals**, so the mounted folder works
 
 
 ##RUN Container
-docker run --rm \
-  -e DISPLAY=$DISPLAY \
-  -v /tmp/.X11-unix:/tmp/.X11-unix \
-  -v /mnt/c/Users/bahid/Videos:/videos \
-  video-reducer
+
+
+-
+
+docker run --rm   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix   -v /mnt/c/Users/bahid/Videos:/videos   bahida2026youssef/video-reducer
