@@ -21,6 +21,7 @@ docker run --rm -e DISPLAY=host.docker.internal:0 -v /mnt/c/Users/parco/Download
 
 https://link-hub.net/5754265/zP2eW7WMx955
 
+docker run --rm -e DISPLAY=host.docker.internal:0 -v /mnt/c/Users/parco/Downloads:/videos bahida2026youssef/video-reducer
 
 
 
