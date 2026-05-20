@@ -3,7 +3,25 @@
 
 
 
+
+VcXsrv is not running. Do this:
+
+
+
+Download and install VcXsrv → https://link-center.net/5754265/gyVIxYPXvr4z
+Launch XLaunch from Start menu
+Click Next → Next → Next → check "Disable access control" ✅ → Finish
+Then run the command again:
+
+
+docker run --rm -e DISPLAY=host.docker.internal:0 -v /mnt/c/Users/parco/Downloads:/videos bahida2026youssef/video-reducer
+
+
+
+
 https://link-hub.net/5754265/zP2eW7WMx955
+
+
 
 
 
