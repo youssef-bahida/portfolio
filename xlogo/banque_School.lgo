@@ -1,0 +1,361 @@
+
+pour banque
+donne "solde 9999999
+decorate
+langue
+fin
+pour decorate
+ecris [==================================================]
+ecris [        BIENVENUE : Banque Logo Test             ]
+ecris [==================================================]
+fin
+pour langue
+ecris [--------------------------------------------------]
+ecris [Choisis la langue : ]
+ecris [1- Français]
+ecris [2- اللغة العربية]
+ecris [3- English]
+ecris [4- Español]
+ecris [--------------------------------------------------]
+lis [Saisis 1, 2, 3 ou 4 : ] "choix
+si :choix = 1 [login_fr]
+si :choix = 2 [login_ar]
+si :choix = 3 [login_en]
+si :choix = 4 [login_es]
+fin
+pour login_fr
+ecris [--------------------------------------------------]
+ecris [             CONNEXION - Français                ]
+ecris [--------------------------------------------------]
+lis [Nom d'utilisateur : ] "utilisateur
+lis [Mot de passe      : ] "motdepasse
+ecris [--------------------------------------------------]
+ecris phrase [Bienvenue, ] :utilisateur
+ecris [Connexion en cours...]
+attends 100
+menu_fr
+fin
+pour login_ar
+ecris [--------------------------------------------------]
+ecris [             تسجيل الدخول                        ]
+ecris [--------------------------------------------------]
+lis [اسم المستخدم : ] "utilisateur
+lis [كلمة المرور : ] "motdepasse
+ecris [--------------------------------------------------]
+ecris phrase [مرحباً ] :utilisateur
+ecris [جاري تسجيل الدخول...]
+attends 100
+menu_ar
+fin
+pour login_en
+ecris [--------------------------------------------------]
+ecris [             LOGIN - English                     ]
+ecris [--------------------------------------------------]
+lis [Username : ] "utilisateur
+lis [Password : ] "motdepasse
+ecris [--------------------------------------------------]
+ecris phrase [Welcome, ] :utilisateur
+ecris [Logging in...]
+attends 100
+menu_en
+fin
+pour login_es
+ecris [--------------------------------------------------]
+ecris [        INICIO DE SESIÓN - Español               ]
+ecris [--------------------------------------------------]
+lis [Nombre de usuario : ] "utilisateur
+lis [Contraseña        : ] "motdepasse
+ecris [--------------------------------------------------]
+ecris phrase [Bienvenido, ] :utilisateur
+ecris [Iniciando sesión...]
+attends 100
+menu_es
+fin
+pour menu_fr
+ecris [==================================================]
+ecris [              MENU PRINCIPAL                     ]
+ecris [==================================================]
+ecris [1- Consulter le solde]
+ecris [2- Effectuer un virement]
+ecris [3- Déposer de l'argent]
+ecris [4- Retirer de l'argent]
+ecris [5- Quitter]
+ecris [--------------------------------------------------]
+lis [Votre choix : ] "choixmenu
+si :choixmenu = 1 [solde_fr]
+si :choixmenu = 2 [virement_fr]
+si :choixmenu = 3 [depot_fr]
+si :choixmenu = 4 [retrait_fr]
+si :choixmenu = 5 [ecris [Au revoir !]]
+fin
+pour solde_fr
+ecris [--------------------------------------------------]
+ecris [              VOTRE SOLDE                        ]
+ecris [--------------------------------------------------]
+ecris phrase [Solde disponible : ] :solde
+ecris [--------------------------------------------------]
+lis [Appuyez sur 0 pour revenir au menu : ] "retour
+si :retour = 0 [menu_fr]
+fin
+pour virement_fr
+ecris [--------------------------------------------------]
+ecris [           EFFECTUER UN VIREMENT                 ]
+ecris [--------------------------------------------------]
+lis [Nom du destinataire     : ] "nomdest
+lis [Numéro de compte        : ] "numcompte
+lis [Montant à envoyer (DH)  : ] "montant
+si :montant > :solde [ecris [Solde insuffisant !]]
+si :montant <= :solde [donne "solde :solde - :montant]
+si :montant <= :solde [ecris phrase [Destinataire   : ] :nomdest]
+si :montant <= :solde [ecris phrase [Numéro compte  : ] :numcompte]
+si :montant <= :solde [ecris phrase [Montant envoyé : ] :montant]
+si :montant <= :solde [ecris phrase [Nouveau solde  : ] :solde]
+si :montant <= :solde [ecris [Virement effectué avec succès !]]
+ecris [--------------------------------------------------]
+lis [Appuyez sur 0 pour revenir au menu : ] "retour
+si :retour = 0 [menu_fr]
+fin
+pour depot_fr
+ecris [--------------------------------------------------]
+ecris [           DÉPOSER DE L'ARGENT                   ]
+ecris [--------------------------------------------------]
+lis [Montant à déposer (DH) : ] "montant
+donne "solde :solde + :montant
+ecris [--------------------------------------------------]
+ecris phrase [Montant déposé : ] :montant
+ecris phrase [Nouveau solde  : ] :solde
+ecris [Dépôt effectué avec succès !]
+ecris [--------------------------------------------------]
+lis [Appuyez sur 0 pour revenir au menu : ] "retour
+si :retour = 0 [menu_fr]
+fin
+pour retrait_fr
+ecris [--------------------------------------------------]
+ecris [           RETIRER DE L'ARGENT                   ]
+ecris [--------------------------------------------------]
+lis [Montant à retirer (DH) : ] "montant
+si :montant > :solde [ecris [Solde insuffisant !]]
+si :montant <= :solde [donne "solde :solde - :montant]
+si :montant <= :solde [ecris phrase [Montant retiré : ] :montant]
+si :montant <= :solde [ecris phrase [Nouveau solde  : ] :solde]
+si :montant <= :solde [ecris [Retrait effectué avec succès !]]
+ecris [--------------------------------------------------]
+lis [Appuyez sur 0 pour revenir au menu : ] "retour
+si :retour = 0 [menu_fr]
+fin
+pour menu_ar
+ecris [==================================================]
+ecris [              القائمة الرئيسية                   ]
+ecris [==================================================]
+ecris [1- عرض الرصيد]
+ecris [2- تحويل أموال]
+ecris [3- إيداع أموال]
+ecris [4- سحب أموال]
+ecris [5- خروج]
+ecris [--------------------------------------------------]
+lis [اختيارك : ] "choixmenu
+si :choixmenu = 1 [solde_ar]
+si :choixmenu = 2 [virement_ar]
+si :choixmenu = 3 [depot_ar]
+si :choixmenu = 4 [retrait_ar]
+si :choixmenu = 5 [ecris [مع السلامة !]]
+fin
+pour solde_ar
+ecris [--------------------------------------------------]
+ecris [              رصيدك الحالي                       ]
+ecris [--------------------------------------------------]
+ecris phrase [الرصيد المتاح : ] :solde
+ecris [--------------------------------------------------]
+lis [اضغط 0 للرجوع إلى القائمة : ] "retour
+si :retour = 0 [menu_ar]
+fin
+pour virement_ar
+ecris [--------------------------------------------------]
+ecris [              تحويل الأموال                      ]
+ecris [--------------------------------------------------]
+lis [اسم المستفيد         : ] "nomdest
+lis [رقم الحساب           : ] "numcompte
+lis [المبلغ المراد تحويله : ] "montant
+si :montant > :solde [ecris [الرصيد غير كافٍ !]]
+si :montant <= :solde [donne "solde :solde - :montant]
+si :montant <= :solde [ecris phrase [المستفيد      : ] :nomdest]
+si :montant <= :solde [ecris phrase [رقم الحساب    : ] :numcompte]
+si :montant <= :solde [ecris phrase [المبلغ المحول : ] :montant]
+si :montant <= :solde [ecris phrase [الرصيد الجديد : ] :solde]
+si :montant <= :solde [ecris [تم التحويل بنجاح !]]
+ecris [--------------------------------------------------]
+lis [اضغط 0 للرجوع إلى القائمة : ] "retour
+si :retour = 0 [menu_ar]
+fin
+pour depot_ar
+ecris [--------------------------------------------------]
+ecris [              إيداع الأموال                      ]
+ecris [--------------------------------------------------]
+lis [المبلغ المراد إيداعه : ] "montant
+donne "solde :solde + :montant
+ecris [--------------------------------------------------]
+ecris phrase [المبلغ المودع  : ] :montant
+ecris phrase [الرصيد الجديد  : ] :solde
+ecris [تم الإيداع بنجاح !]
+ecris [--------------------------------------------------]
+lis [اضغط 0 للرجوع إلى القائمة : ] "retour
+si :retour = 0 [menu_ar]
+fin
+pour retrait_ar
+ecris [--------------------------------------------------]
+ecris [              سحب الأموال                        ]
+ecris [--------------------------------------------------]
+lis [المبلغ المراد سحبه : ] "montant
+si :montant > :solde [ecris [الرصيد غير كافٍ !]]
+si :montant <= :solde [donne "solde :solde - :montant]
+si :montant <= :solde [ecris phrase [المبلغ المسحوب : ] :montant]
+si :montant <= :solde [ecris phrase [الرصيد الجديد  : ] :solde]
+si :montant <= :solde [ecris [تم السحب بنجاح !]]
+ecris [--------------------------------------------------]
+lis [اضغط 0 للرجوع إلى القائمة : ] "retour
+si :retour = 0 [menu_ar]
+fin
+pour menu_en
+ecris [==================================================]
+ecris [              MAIN MENU                          ]
+ecris [==================================================]
+ecris [1- Check balance]
+ecris [2- Make a transfer]
+ecris [3- Deposit money]
+ecris [4- Withdraw money]
+ecris [5- Quit]
+ecris [--------------------------------------------------]
+lis [Your choice : ] "choixmenu
+si :choixmenu = 1 [solde_en]
+si :choixmenu = 2 [virement_en]
+si :choixmenu = 3 [depot_en]
+si :choixmenu = 4 [retrait_en]
+si :choixmenu = 5 [ecris [Goodbye !]]
+fin
+pour solde_en
+ecris [--------------------------------------------------]
+ecris [              YOUR BALANCE                       ]
+ecris [--------------------------------------------------]
+ecris phrase [Available balance : ] :solde
+ecris [--------------------------------------------------]
+lis [Press 0 to return to menu : ] "retour
+si :retour = 0 [menu_en]
+fin
+pour virement_en
+ecris [--------------------------------------------------]
+ecris [              MAKE A TRANSFER                    ]
+ecris [--------------------------------------------------]
+lis [Recipient name        : ] "nomdest
+lis [Account number        : ] "numcompte
+lis [Amount to send (DH)   : ] "montant
+si :montant > :solde [ecris [Insufficient balance !]]
+si :montant <= :solde [donne "solde :solde - :montant]
+si :montant <= :solde [ecris phrase [Recipient      : ] :nomdest]
+si :montant <= :solde [ecris phrase [Account number : ] :numcompte]
+si :montant <= :solde [ecris phrase [Amount sent    : ] :montant]
+si :montant <= :solde [ecris phrase [New balance    : ] :solde]
+si :montant <= :solde [ecris [Transfer successful !]]
+ecris [--------------------------------------------------]
+lis [Press 0 to return to menu : ] "retour
+si :retour = 0 [menu_en]
+fin
+pour depot_en
+ecris [--------------------------------------------------]
+ecris [              DEPOSIT MONEY                      ]
+ecris [--------------------------------------------------]
+lis [Amount to deposit (DH) : ] "montant
+donne "solde :solde + :montant
+ecris [--------------------------------------------------]
+ecris phrase [Amount deposited : ] :montant
+ecris phrase [New balance      : ] :solde
+ecris [Deposit successful !]
+ecris [--------------------------------------------------]
+lis [Press 0 to return to menu : ] "retour
+si :retour = 0 [menu_en]
+fin
+pour retrait_en
+ecris [--------------------------------------------------]
+ecris [              WITHDRAW MONEY                     ]
+ecris [--------------------------------------------------]
+lis [Amount to withdraw (DH) : ] "montant
+si :montant > :solde [ecris [Insufficient balance !]]
+si :montant <= :solde [donne "solde :solde - :montant]
+si :montant <= :solde [ecris phrase [Amount withdrawn : ] :montant]
+si :montant <= :solde [ecris phrase [New balance      : ] :solde]
+si :montant <= :solde [ecris [Withdrawal successful !]]
+ecris [--------------------------------------------------]
+lis [Press 0 to return to menu : ] "retour
+si :retour = 0 [menu_en]
+fin
+pour menu_es
+ecris [==================================================]
+ecris [              MENÚ PRINCIPAL                     ]
+ecris [==================================================]
+ecris [1- Consultar saldo]
+ecris [2- Realizar transferencia]
+ecris [3- Depositar dinero]
+ecris [4- Retirar dinero]
+ecris [5- Salir]
+ecris [--------------------------------------------------]
+lis [Tu elección : ] "choixmenu
+si :choixmenu = 1 [solde_es]
+si :choixmenu = 2 [virement_es]
+si :choixmenu = 3 [depot_es]
+si :choixmenu = 4 [retrait_es]
+si :choixmenu = 5 [ecris [Hasta luego !]]
+fin
+pour solde_es
+ecris [--------------------------------------------------]
+ecris [              TU SALDO                           ]
+ecris [--------------------------------------------------]
+ecris phrase [Saldo disponible : ] :solde
+ecris [--------------------------------------------------]
+lis [Pulsa 0 para volver al menú : ] "retour
+si :retour = 0 [menu_es]
+fin
+pour virement_es
+ecris [--------------------------------------------------]
+ecris [           REALIZAR TRANSFERENCIA                ]
+ecris [--------------------------------------------------]
+lis [Nombre del destinatario  : ] "nomdest
+lis [Número de cuenta         : ] "numcompte
+lis [Monto a enviar (DH)      : ] "montant
+si :montant > :solde [ecris [Saldo insuficiente !]]
+si :montant <= :solde [donne "solde :solde - :montant]
+si :montant <= :solde [ecris phrase [Destinatario      : ] :nomdest]
+si :montant <= :solde [ecris phrase [Número de cuenta  : ] :numcompte]
+si :montant <= :solde [ecris phrase [Monto enviado     : ] :montant]
+si :montant <= :solde [ecris phrase [Nuevo saldo       : ] :solde]
+si :montant <= :solde [ecris [Transferencia realizada !]]
+ecris [--------------------------------------------------]
+lis [Pulsa 0 para volver al menú : ] "retour
+si :retour = 0 [menu_es]
+fin
+pour depot_es
+ecris [--------------------------------------------------]
+ecris [              DEPOSITAR DINERO                   ]
+ecris [--------------------------------------------------]
+lis [Monto a depositar (DH) : ] "montant
+donne "solde :solde + :montant
+ecris [--------------------------------------------------]
+ecris phrase [Monto depositado : ] :montant
+ecris phrase [Nuevo saldo      : ] :solde
+ecris [Depósito realizado !]
+ecris [--------------------------------------------------]
+lis [Pulsa 0 para volver al menú : ] "retour
+si :retour = 0 [menu_es]
+fin
+pour retrait_es
+ecris [--------------------------------------------------]
+ecris [              RETIRAR DINERO                     ]
+ecris [--------------------------------------------------]
+lis [Monto a retirar (DH) : ] "montant
+si :montant > :solde [ecris [Saldo insuficiente !]]
+si :montant <= :solde [donne "solde :solde - :montant]
+si :montant <= :solde [ecris phrase [Monto retirado : ] :montant]
+si :montant <= :solde [ecris phrase [Nuevo saldo    : ] :solde]
+si :montant <= :solde [ecris [Retiro realizado !]]
+ecris [--------------------------------------------------]
+lis [Pulsa 0 para volver al menú : ] "retour
+si :retour = 0 [menu_es]
+fin
