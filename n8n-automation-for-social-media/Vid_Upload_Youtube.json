@@ -1,0 +1,537 @@
+{
+  "name": "Vid_Upload_Youtube",
+  "nodes": [
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "upload",
+        "title": "={{ $json.name }}",
+        "regionCode": "MA",
+        "categoryId": "1",
+        "options": {
+          "privacyStatus": "public",
+          "selfDeclaredMadeForKids": "={{ false }}",
+          "tags": "anime,story,tiktok,viral,motivation"
+        }
+      },
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        416,
+        -304
+      ],
+      "id": "466aa5f6-e6f1-425a-80a8-fda247d80df1",
+      "name": "Upload a video",
+      "credentials": {
+        "youTubeOAuth2Api": {
+          "id": "JfMZksJd2jq9IbML",
+          "name": "YouTube account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -160,
+        -640
+      ],
+      "id": "ec8f3a5a-6ba6-4d1d-a9b7-80f1b71e429a",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "limit": 5,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1GIiayEc03B5Z6dyiMGV6P3ke__ycNaHm",
+            "mode": "list",
+            "cachedResultName": "Gen_Vid_TesTing",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1GIiayEc03B5Z6dyiMGV6P3ke__ycNaHm"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -432,
+        -400
+      ],
+      "id": "93b6fdc8-da54-4ca8-8eef-470809375fd0",
+      "name": "Search files and folders",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KBlYdiOPXjhswu8v",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -240,
+        -400
+      ],
+      "id": "31ae7eb1-31c3-4fe1-8879-3b3a58ec945a",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -32,
+        -384
+      ],
+      "id": "44d19975-cd5f-408f-b33c-8c14d595a908",
+      "name": "Download file",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KBlYdiOPXjhswu8v",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlistItem",
+        "playlistId": "PLR_MH5KLwTPQLRNtJ8uaO0IZwK-HuYQyH",
+        "videoId": "={{ $json.uploadId }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        672,
+        -304
+      ],
+      "id": "a117e336-cc8b-4e65-ac69-fb97b3790edb",
+      "name": "Add a playlist item",
+      "credentials": {
+        "youTubeOAuth2Api": {
+          "id": "JfMZksJd2jq9IbML",
+          "name": "YouTube account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "deleteFile",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $('Download file').item.json.id }}",
+          "mode": "id"
+        },
+        "options": {
+          "deletePermanently": true
+        }
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        960,
+        -496
+      ],
+      "id": "3de561e5-5ee3-4908-986d-bee8e37bde45",
+      "name": "Delete a file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KBlYdiOPXjhswu8v",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "reels",
+        "node": "17841443710597513",
+        "videoUrl": "={{ $json.secure_url }}",
+        "caption": " #viral #fyp #reels #tiktok",
+        "additionalFields": {}
+      },
+      "type": "@mookielianhd/n8n-nodes-instagram.instagram",
+      "typeVersion": 1,
+      "position": [
+        672,
+        -656
+      ],
+      "id": "a1ff78d4-bbc2-42ba-9f93-179e7ef04c77",
+      "name": "Publish",
+      "credentials": {
+        "instagramApi": {
+          "id": "zgCuZWgl6dmAFayc",
+          "name": "Instagram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "uploadFile",
+        "resource_type_file": "video",
+        "additionalFieldsFile": {}
+      },
+      "type": "n8n-nodes-cloudinary.cloudinary",
+      "typeVersion": 1,
+      "position": [
+        144,
+        -656
+      ],
+      "id": "d844a4f5-abf3-4989-98f6-1a1da2cfc381",
+      "name": "Upload an asset from file data",
+      "credentials": {
+        "cloudinaryApi": {
+          "id": "ESBLT1hyC3VD67sh",
+          "name": "Cloudinary account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        416,
+        -800
+      ],
+      "id": "99474e7a-4ca3-4a3a-b7a5-8aee474fbd70",
+      "name": "Wait1",
+      "webhookId": "ced16428-5951-438a-a52a-d33c31946787"
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "https://api.cloudinary.com/v1_1/dnsiafmzt/video/destroy",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "public_id",
+              "value": "={{ $json.public_id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        672,
+        -512
+      ],
+      "id": "88044c8e-76de-499c-9bfa-5147e846dc29",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "6WeuIgIndlSQdjuD",
+          "name": "Unnamed credential"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 25,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        208,
+        -304
+      ],
+      "id": "d1367e63-a836-459c-b668-8d01ad0f8569",
+      "name": "Wait2",
+      "webhookId": "13934a2a-9c8f-4619-870e-48bd7009f166"
+    },
+    {
+      "parameters": {
+        "amount": 15,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        416,
+        -512
+      ],
+      "id": "19ca0785-0bfd-40aa-9210-eff6e2fc6f6f",
+      "name": "Wait3",
+      "webhookId": "56148325-a76c-4d6b-aab6-a3fe9a5e353d"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v25.0/1116961678168571/videos",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"file_url\": \" {{ $json.secure_url }}\",\n  \"description\": \"#viral #fyp #reels #trending\",\n  \"access_token\": \"EAAWOJpx3PmkBRtoCsjaoNfHuwcJwjDFlB4PJsX47W7ZCrEELRFMr4HKtwaYpch7LZCaZArhvsZBmiYsAiH7QbcjJfZC3iZAqmdCRy8z2FxVUFv2vjQb8hq3pRkGBqvTBPIWgcOkkYO8eHCtXEraXofaOeMyzUduTDArLpAb6JMNuxjd63VxbOYro2OmJWwrKMT2KBJ2kX3\"\n} ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        672,
+        -800
+      ],
+      "id": "71e9009f-62e6-4387-89de-b6e1a87143b9",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "amount": 15,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        416,
+        -656
+      ],
+      "id": "9840e9d0-b36d-41c4-b940-02e95d91cfef",
+      "name": "Wait4",
+      "webhookId": "bc9f574a-0a9e-49ad-b62a-cde003a1416d"
+    },
+    {
+      "parameters": {
+        "amount": 2,
+        "unit": "hours"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        960,
+        -272
+      ],
+      "id": "e593f96d-88a5-4aa6-9fc2-8fd237831d0d",
+      "name": "Wait",
+      "webhookId": "b19efb0b-9c82-4e3a-bf67-2282ce26c414"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Search files and folders",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search files and folders": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Download file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download file": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Upload an asset from file data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload a video": {
+      "main": [
+        [
+          {
+            "node": "Add a playlist item",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add a playlist item": {
+      "main": [
+        [
+          {
+            "node": "Delete a file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete a file": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Publish": {
+      "main": [
+        []
+      ]
+    },
+    "Upload an asset from file data": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        []
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "Upload a video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        []
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "Publish",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "fd441f7e-5b61-4719-bd72-ad3f2d2d625e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "fdb00f58a4509fefdfff2d7dbd1f35f7e6ddda2fd0e55da1ce0ce8791fa27ed7"
+  },
+  "id": "uXqtvEdRfQyCEgGd",
+  "tags": [
+    {
+      "updatedAt": "2026-05-28T07:21:48.855Z",
+      "createdAt": "2026-05-28T07:21:48.855Z",
+      "id": "qNqdqM3libkD8Qh9",
+      "name": "the best"
+    }
+  ]
+}
